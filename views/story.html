@@ -1,10 +1,27 @@
 <!DOCTYPE html>
-<html lang="en-US">
+<html ng-app="vwic" lang="en-US">
 <head>
-  <% include common_header %>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{title}}</title>
   <link rel="stylesheet" type="text/css" href="/css/story.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/style.css"/>z
+  <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
+  <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
+  <link href="http://fonts.googleapis.com/css?family=Raleway:400,700,200,100,300,500,600,800,900" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet" type="text/css">
+  <link href="http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic" rel="stylesheet" type="text/css">
+  <!-- Include the AngularJS library -->
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
+  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+  <script>
+  $(window).load(function(){
+    $("#menu").sticky({ topSpacing: 0 });
+  });
+  </script>
 </head>
-<body>
+<body ng-controller="storyController">
   <!-- NAVBAR -->
   <div class="navbar menubar" id="menu">
     <div class="container">
@@ -17,11 +34,11 @@
       <div>
         <nav class="collapse navbar-collapse" id="myNavbar" role="navigation">
           <ul class="nav navbar-nav navbar-right navstyle">
-            <li><a href="#banner" class="page-scroll">Home</a></li>
-            <li><a href="#about" class="page-scroll">About Us</a></li>
-            <li><a href="#stories" class="page-scroll active">Hall of fame</a></li>
-            <li><a href="#mentorship" class="page-scroll">Mentorship</a></li>
-            <li><a href="#events" class="page-scroll">Events</a></li>
+            <li><a href="/" class="page-scroll">Home</a></li>
+            <li><a href="/#about" class="page-scroll">About Us</a></li>
+            <li><a href="/#stories" class="page-scroll active">Hall of fame</a></li>
+            <li><a href="/#mentorship" class="page-scroll">Mentorship</a></li>
+            <li><a href="/#events" class="page-scroll">Events</a></li>
           </ul>
         </nav>
       </div>
@@ -35,10 +52,10 @@
       <center>
         <img src="https://www.whitehouse.gov/sites/default/files/sotu_2015/flotus_sotu_suite_blog_kathypham.png" name="kathypham" width="140" height="140" class="img-circle"/>
         <div>
-          <a href='#'><img class="icon-story" src="/images/twitter.png" alt="twitter icon"></a>
-          <a href='#'><img class="icon-story" src="/images/facebook.png" alt="facebook icon"></a>
+          <a href="#"><img class="icon-story" src="/images/twitter.png" alt="twitter icon"></a>
+          <a href="#"><img class="icon-story" src="/images/facebook.png" alt="facebook icon"></a>
         </div>
-        <h3 class="hostyle">Kathy Pham</h3>
+        <h1 class="hostyle">Kathy Pham</h1>
         <h2 class="banner-text">The woman in the White House</h2>
       </center>
     </div>

@@ -1,4 +1,6 @@
 p {
+  font-family: 'Source Sans Pro',sans-serif;
+  font-size: 20px;
   word-wrap:break-word;
 }
 
@@ -77,9 +79,14 @@ h3.hostyle
   padding: 15px;
 }
 .post .post-description p {
-  font-size: 14px;
+  font-size: 20px;
 }
-.post .post-description .stats {
+
+.post .post-description cite {
+  font-size: 18px;
+}
+
+/*.post .post-description .stats {
   margin-top: 20px;
 }
 .post .post-description .stats .stat-item {
@@ -88,7 +95,7 @@ h3.hostyle
 }
 .post .post-description .stats .stat-item .icon {
   margin-right: 8px;
-}
+}*/
 .post .post-footer {
   border-top: 1px solid #ddd;
   padding: 15px;
@@ -115,20 +122,24 @@ h3.hostyle
   width: 100%;
 }
 .post .post-footer .comments-list .comment .comment-heading .user {
-  font-size: 14px;
+  font-size: 18px;
   font-weight: bold;
   display: inline;
   margin-top: 0;
   margin-right: 10px;
 }
 .post .post-footer .comments-list .comment .comment-heading .time {
-  font-size: 12px;
+  font-size: 13px;
   color: #aaa;
   margin-top: 0;
   display: inline;
 }
 .post .post-footer .comments-list .comment .comment-body {
   margin-left: 50px;
+}
+
+.comment-body p{
+  font-size:17px;
 }
 .post .post-footer .comments-list .comment > .comments-list {
   margin-left: 50px;

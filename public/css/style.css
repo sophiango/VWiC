@@ -15,7 +15,7 @@
 	background: linear-gradient(left, #341F48 50%, #2b193c 50%);
 }
 
-.banner-text 
+.banner-text
 {
     display: table-cell;
     vertical-align: middle;
@@ -153,7 +153,7 @@
 	height: auto !important;
 	font-family: 'Pacifico', cursive;
 	color: #fff !important;
-	font-size: 34px !important;	
+	font-size: 34px !important;
 }
 
 .navstyle li a
@@ -263,7 +263,7 @@
 	margin: 0px;
 	letter-spacing: 2px;
 }
-.alldesc h2 
+.alldesc h2
 {
     color: #CB5750;
     font-family: "Source Sans Pro",sans-serif;
@@ -431,7 +431,7 @@ figure.effect-Beauty p {
 	transition: opacity 0.35s, transform 0.35s;
 	-webkit-transform: translate3d(0,20px,0) scale(1.1);
 	transform: translate3d(0,20px,0) scale(1.1);
-} 
+}
 
 figure.effect-Beauty:hover h2 {
 	-webkit-transform: translate3d(0,0,0);
@@ -594,18 +594,18 @@ figure.effect-Beauty:hover p {
 	padding: 20px 0px 5px;
 }
 
-.form-group
+/*.form-group
 {
 	margin-bottom: 0px !important;
-	
-}
-.form-control, .form-control:focus
+
+}*/
+/*.form-control, .form-control:focus
 {
 	color: #fff !important;
 	border: 1px solid #fff !important;
 	background-color: #CB5750 !important;
 	box-shadow: none !important;
-}
+}*/
 .social
 {
 	list-style: none;
@@ -658,7 +658,7 @@ figure.effect-Beauty:hover p {
 .foot-logo
 {
 	font-family: 'Pacifico', cursive;
-	color: #3EC9C3;	
+	color: #3EC9C3;
 	font-size: 30px;
 	text-align: center;
 }
@@ -673,7 +673,7 @@ figure.effect-Beauty:hover p {
 }
 .foot-text a
 {
-	color: #3EC9C3;	
+	color: #3EC9C3;
 }
 
 

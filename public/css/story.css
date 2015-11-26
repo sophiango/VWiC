@@ -1,3 +1,11 @@
+.edit-content{
+  margin-top:50px;
+}
+
+textarea.form-control{
+  
+}
+
 p {
   font-family: 'Source Sans Pro',sans-serif;
   font-size: 20px;

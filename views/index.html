@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html ng-app="vwic" lang="en-US">
+<html lang="en-US">
 <head>
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{title}}</title>
+  <title>VWiC - Vietnamese Women in Computing</title>
   <link rel="stylesheet" type="text/css" href="/css/style.css"/>
   <link rel="stylesheet" type="text/css" href="/css/bootstrap.min.css"/>
   <link rel="stylesheet" type="text/css" href="/css/font-awesome.min.css"/>
@@ -11,9 +11,11 @@
   <link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
   <link href='http://fonts.googleapis.com/css?family=Source+Sans+Pro:200,300,400,600,700,700italic,900,400italic,300italic' rel='stylesheet' type='text/css'>
   <!-- Include the AngularJS library -->
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.3.5/angular.min.js"></script>
-  <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
+  <script type="text/javascript" src="/controllers/mainController.js"></script>
+  <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <script>
   $(window).load(function(){
     $("#menu").sticky({ topSpacing: 0 });
@@ -21,7 +23,7 @@
   </script>
 
 </head>
-<body ng-controller="mainController">
+<body ng-app="vwic" ng-controller="MainCtrl">
   <div class="container-fluid banner text-center" id="banner">
     <div class="row">
       <div class="col-md-12 line">
@@ -80,13 +82,13 @@
               <div class="col-md-6 col-sm-6 col-xs-6 block">
                 <div class="counter-item">
                   <h5>Our Clients</h5>
-                  <div class="timer" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50">55</div>
+                  <div class="timer" data-from="0" data-to="55" data-speed="5000" data-refresh-interval="50">{{number1}}</div>
                 </div>
               </div>
               <div class="col-md-6 col-sm-6 col-xs-6">
                 <div class="counter-item">
                   <h5>Projects completed</h5>
-                  <div class="timer" data-from="0" data-to="88" data-speed="5000" data-refresh-interval="50">88</div>
+                  <div class="timer" data-from="0" data-to="88" data-speed="5000" data-refresh-interval="50">{{number2}}</div>
                 </div>
               </div>
             </div>
@@ -343,7 +345,7 @@
     </footer>
 
     <script src="js/bootstrap.min.js"></script>
-    <script src="js/typed.js" type="text/javascript"></script>
+    <!-- <script src="js/typed.js" type="text/javascript"></script> -->
     <script src="js/jquery.mixitup.js" type="text/javascript"></script>
     <script type="text/javascript" src="js/jquery.countTo.js"></script>
     <script type="text/javascript" src="js/jquery.waypoints.min.js"></script>
@@ -412,7 +414,7 @@
         $(document).off("scroll");
         $('a').each(function () {
           $(this).removeClass('active');
-        }
+        });
         $(this).addClass('active');
         var target = this.hash;
         $target = $(target);

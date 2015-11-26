@@ -9,10 +9,4 @@ router.get('/', function(req, res, next) {
   // res.render('index', { title: 'Express' });
 });
 
-router.get('/story', function(req, res, next) {
-  // res.render('story');
-  res.sendFile(path.join(__dirname, '../views/story.html'));
-});
-
-
 module.exports = router;

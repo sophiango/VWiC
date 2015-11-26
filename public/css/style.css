@@ -178,78 +178,77 @@
 
 
 /*------------------------------------------/
-/-----------------Banner--------------------/
+/-----------------About---------------------/
 /------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-/*------------------------------------------/
-/-----------------Features------------------/
-/------------------------------------------*/
-
-.features
+.about
 {
-	padding: 100px 0px 100px;
+	padding: 100px 0px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-.feature-icons
+
+.icon-story
 {
-	width: 12%;
-	float: left;
+	height: 25px;
+	width: 25px;
 }
-.featurebox
+
+.cofounders h2 {
+
+    font-family: 'Pacifico', cursive;
+    color: #33A29D;
+    font-size: 40px;
+    text-align: center;
+    margin: 20px;
+}
+
+.cofounders p {
+
+	font-family: 'Source Sans Pro',sans-serif;
+    margin: 0 0 10px;
+}
+.progresscount
 {
 	margin-top: 60px;
 }
-.feature-icons img
+.progress-style
 {
-	width: 100%;
+    background-color: rgba(0,0,0, 0.06) !important;
+    box-shadow: none !important;
+    border-radius: 10px !important;
 }
-.fh-desc
+.progress-bar
 {
-	width: 80%;
-	float: right;
+	background-color: #45AACB !important;
 }
-
-.fh-desc h3
+.counter-item h5
 {
 	margin: 0px !important;
 	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #242424;
 }
-.fh-desc p {
-    color: #888;
-    font-family: "Source Sans Pro",sans-serif;
-    font-size: 16px;
-    margin-top: 5px;
-	width: 90%;
+.timer
+{
+	color: #45aacb;
+	font-family: "Source Sans Pro",sans-serif;
+	font-size: 50px;
+	font-weight: 600;
+}
+.block
+{
+	padding-left: 0px !important;
 }
 
-
-
-
+.progresstitle h5
+{
+	margin: 0px 0px 10px !important;
+	font-family: 'Raleway', sans-serif;
+}
 
 /*------------------------------------------/
-/-----------------Gallery-------------------/
+/----------STORIES(HALL OF FAME)------------/
 /------------------------------------------*/
 
-.gallery
+.stories
 {
 	padding: 100px 0px;
 }
@@ -444,44 +443,49 @@ figure.effect-Beauty:hover p {
 	transform: translate3d(0,0,0) scale(1);
 }
 
+/* ==========================================================================
+   Blog Section
+   ========================================================================== */
 
+.blog-bg {
+	background: #2b2b2b;
+	padding-right: 0px;
+	padding-left: 0px;
 
+}
 
+.blog-bg h4 {
+	color: #dadada;
+	padding-top: 0px;
+}
 
+.blog-bg h5 {
+	color: #dadada;
+	font-size: 11px;
+}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.blog-content {
+	padding-top: 10px;
+	background: #f2f2f2;
+}
 
 /*------------------------------------------/
-/-----------------Note----------------------/
+/--------------MENTORSHIP-------------------/
 /------------------------------------------*/
-.notes
+.mentorship
 {
 	background-color: #45AACB;
 	padding: 100px 0px;
 }
-.notes p
+.mentorship h1
 {
 	color: #fff;
 	font-family: "Source Sans Pro",sans-serif;
 	font-weight: 400;
-	font-size: 18px;
+	font-size: 20px;
 	margin: 0px;
 }
-.notes button
+.mentorship .btn
 {
 	display: inline-block;
 	border: medium none;
@@ -493,95 +497,50 @@ figure.effect-Beauty:hover p {
 }
 
 /*------------------------------------------/
-/-----------------About---------------------/
+/-----------------EVENTS------------------/
 /------------------------------------------*/
 
-.about
+.events
 {
-	padding: 100px 0px;
+	padding: 100px 0px 100px;
 	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
 }
-.progresscount
+.feature-icons
+{
+	width: 12%;
+	float: left;
+}
+.featurebox
 {
 	margin-top: 60px;
 }
-.progress-style
+.feature-icons img
 {
-    background-color: rgba(0,0,0, 0.06) !important;
-    box-shadow: none !important;
-    border-radius: 10px !important;
+	width: 100%;
 }
-.progress-bar
+.fh-desc
 {
-	background-color: #45AACB !important;
+	width: 80%;
+	float: right;
 }
-.counter-item h5
+
+.fh-desc h3
 {
 	margin: 0px !important;
 	font-family: 'Raleway', sans-serif;
-}
-.timer
-{
-	color: #45aacb;
-	font-family: "Source Sans Pro",sans-serif;
-	font-size: 50px;
-	font-weight: 600;
-}
-.block
-{
-	padding-left: 0px !important;
-}
-
-.progresstitle h5
-{
-	margin: 0px 0px 10px !important;
-	font-family: 'Raleway', sans-serif;
-}
-
-
-
-
-/*------------------------------------------/
-/-----------------Team----------------------/
-/------------------------------------------*/
-
-
-
-
-
-
-
-
-
-/*------------------------------------------/
-/-----------------Testimonial---------------/
-/------------------------------------------*/
-.testimonials
-{
-	padding: 100px 0px;
-}
-.quotes
-{
-	margin-top: 60px;
-	font-family: "Source Sans Pro",sans-serif;
-	color: #888;
-}
-.quotes blockquote
-{
-	margin-bottom: 0px !important;
-}
-.name
-{
-	text-align: right;
-	font-style:italic;
+	font-size: 22px;
 	font-weight: 400;
-	font-size: 15px;
+	text-transform: uppercase;
+	letter-spacing: 1px;
 	color: #242424;
 }
-
-
-
-
+.fh-desc p {
+    color: #888;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+	width: 90%;
+}
 
 
 /*------------------------------------------/

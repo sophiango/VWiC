@@ -25,6 +25,42 @@ $(document).ready(function () {
         prevTab($active);
 
     });
+
+    // $('#step1-form').validate({
+    //     rules: {
+    //         inputName: {
+    //           minlength: 3,
+    //           required: true
+    //         },
+    //         inputHeadline: {
+    //           minlength: 3,
+    //           required: true
+    //         },
+    //         twitterAcc:{
+    //           maxlength:15
+    //         },
+    //         facebookAcc:{
+    //           maxlength:15
+    //         }
+    //     },
+    //     highlight: function(element) {
+    //         $(element).closest('.form-group').addClass('has-error');
+    //     },
+    //     unhighlight: function(element) {
+    //         $(element).closest('.form-group').removeClass('has-error');
+    //     },
+    //     errorElement: 'span',
+    //     errorClass: 'help-block',
+    //     errorPlacement: function(error, element) {
+    //         if(element.parent('.input-group').length) {
+    //             error.insertAfter(element.parent());
+    //         } else {
+    //             error.insertAfter(element);
+    //         }
+    //     }
+    // });
+
+
 });
 
 function nextTab(elem) {

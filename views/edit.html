@@ -16,9 +16,11 @@
   <!-- Include the AngularJS library -->
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.5/angular.min.js"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script src="http://ajax.aspnetcdn.com/ajax/jquery.validate/1.14.0/jquery.validate.min.js"></script>
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
   <script type="text/javascript" src="/js/edit.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
   <!-- Latest compiled and minified JavaScript -->
 </head>
 <body>
@@ -30,116 +32,145 @@
         <div class="wizard">
           <div class="wizard-inner">
             <div class="connecting-line"></div>
-            <ul class="nav nav-tabs" role="tablist">
-
-              <li role="presentation" class="active">
-                <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
-                  <span class="round-tab">
-                    <i class="glyphicon glyphicon-folder-open"></i>
-                  </span>
-                </a>
-              </li>
-
-              <li role="presentation" class="disabled">
-                <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
-                  <span class="round-tab">
-                    <i class="glyphicon glyphicon-pencil"></i>
-                  </span>
-                </a>
-              </li>
-              <li role="presentation" class="disabled">
-                <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
-                  <span class="round-tab">
-                    <i class="glyphicon glyphicon-picture"></i>
-                  </span>
-                </a>
-              </li>
-
-              <li role="presentation" class="disabled">
-                <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
-                  <span class="round-tab">
-                    <i class="glyphicon glyphicon-ok"></i>
-                  </span>
-                </a>
-              </li>
+              <ul class="nav nav-tabs" role="tablist">
+                <li role="presentation" class="active">
+                  <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-folder-open"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-pencil"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-picture"></i>
+                    </span>
+                  </a>
+                </li>
+                <li role="presentation" class="disabled">
+                  <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                    <span class="round-tab">
+                      <i class="glyphicon glyphicon-ok"></i>
+                    </span>
+                  </a>
+                </li>
             </ul>
           </div>
 
-          <form role="form">
-            <div class="tab-content">
-              <div class="tab-pane active" role="tabpanel" id="step1">
-                <div class="edit-form">
-                  <h2 class="edit-label">About the hero: </h2>
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">Hero name</div>
-                        <input type="text" class="form-control" id="inputName" placeholder="name">
+          <!-- <form role="form"> -->
+          <div class="tab-content">
+            <div class="tab-pane active" role="tabpanel" id="step1">
+              <div class="edit-form">
+                <h2 class="edit-label">About the hero: </h2>
+                <form id="step1-form" role="form" data-toggle="validator">
+                  <div class="form-group">
+                    <div class="input-group">
+                      <div class="input-group-addon">Hero name</div>
+                      <input type="text" class="form-control" name="inputName" placeholder="name" required>
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Headline</div>
+                      <input type="text" class="form-control" name="inputHeadline" placeholder="headline" required>
+                    </div>
+                    <div class="row">
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <div class="input-group-addon">Twitter @</div>
+                          <!-- <input type="text" class="form-control" name="twitterAcc"> -->
+                          <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="twitter">
+                        </div>
                       </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Headline</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="headline">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Twitter</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="twitter">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Facebook</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="facebook">
+                      <div class="col-sm-6">
+                        <div class="input-group">
+                          <div class="input-group-addon">Facebook</div>
+                          <!-- <input type="text" class="form-control" name="facebookAcc"> -->
+                          <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="facebookAcc" placeholder="facebook">
+                        </div>
                       </div>
                     </div>
-                  </form>
-                </div>
-                <ul class="list-inline pull-right">
-                  <li><button type="button" class="edit-form btn btn-pink next-step">Save and continue</button></li>
-                </ul>
+                  </div>
+                </form>
               </div>
-              <div class="tab-pane" role="tabpanel" id="step2">
-                <div class="edit-form">
-                  <h2 class="edit-label">How's the hero inspire you: </h2>
-                  <form class="form-inline">
-                    <div class="form-group">
-                      <div class="input-group">
-                        <div class="input-group-addon">Hero name</div>
-                        <input type="text" class="form-control" id="inputName" placeholder="name">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Headline</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="headline">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Twitter</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="twitter">
-                      </div>
-                      <div class="input-group">
-                        <div class="input-group-addon">Facebook</div>
-                        <input type="text" class="form-control" id="inputHeadline" placeholder="facebook">
-                      </div>
-                    </div>
-                  </form>
-                </div>
-                <ul class="list-inline pull-right">
-                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                  <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
-                </ul>
-              </div>
-              <div class="tab-pane" role="tabpanel" id="step3">
-                <h3>Step 3</h3>
-                <p>This is step 3</p>
-                <ul class="list-inline pull-right">
-                  <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
-                  <li><button type="button" class="btn btn-default next-step">Skip</button></li>
-                  <li><button type="button" class="btn btn-primary btn-info-full next-step">Save and continue</button></li>
-                </ul>
-              </div>
-              <div class="tab-pane" role="tabpanel" id="complete">
-                <h3>Complete</h3>
-                <p>You have successfully completed all steps.</p>
-              </div>
-              <div class="clearfix"></div>
+              <ul class="list-inline pull-right">
+                <li><button type="submit" class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
             </div>
-          </form>
+
+            <div class="tab-pane" role="tabpanel" id="step2">
+              <div class="edit-form-2">
+                <h2 class="edit-label">How the hero inspired you: </h2>
+                <form id="step2-form">
+                  <textarea name=content class="form-control" rows="12" placeholder="Place content here" required></textarea>
+                </form>
+              </div>
+              <ul class="list-inline pull-right">
+                <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
+
+            <div class="tab-pane" role="tabpanel" id="step3">
+                <form id="step3-form" class="edit-form">
+                  <div class="form-group">
+                    <h2 class="edit-label">More resources (articles and images,): </h2>
+                    <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
+                    <textarea name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 1</div>
+                      <input type="url" class="form-control" placeholder="src1">
+                    </div>
+                    <textarea name=quote1 class="form-control" rows="12" placeholder="Place content here"></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 2</div>
+                      <input type="url" class="form-control" placeholder="src2">
+                    </div>
+                    <textarea name=quote1 class="form-control" rows="12" placeholder="Place content here"></textarea>
+                    <div class="input-group">
+                      <div class="input-group-addon">Source 3</div>
+                      <input type="url" class="form-control" placeholder="src3">
+                    </div>
+                    <p>Images: (Please paste the link of the image you want to attach to your post)</p>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 1</div>
+                      <input type="url" class="form-control" placeholder="img1">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 2</div>
+                      <input type="url" class="form-control" placeholder="img2">
+                    </div>
+                    <div class="input-group">
+                      <div class="input-group-addon">Image 3</div>
+                      <input type="url" class="form-control" placeholder="img3">
+                    </div>
+                  </div>
+                </form>
+              <ul class="list-inline pull-right">
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li>
+                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
+              </ul>
+            </div>
+            <div class="tab-pane" role="tabpanel" id="complete">
+              <div class="edit-form-complete">
+                <p>Thank you for sharing your hero story!</p>
+                <p>Share it with your network using this link: http://vwic.com/story/1ab224</p>
+              </div>
+              <ul class="list-inline pull-right">
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn next-step">Publish</button></li>
+              </ul>
+            </div>
+            <div class="clearfix"></div>
+          </div>
+          <!-- </form> -->
         </div>
       </section>
     </div>

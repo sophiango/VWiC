@@ -24,6 +24,7 @@
 <body>
 
   <div class="container">
+    <h3 class="hostyle">Creating a new hero story</h3>
     <div class="row">
       <section>
         <div class="wizard">
@@ -67,15 +68,57 @@
           <form role="form">
             <div class="tab-content">
               <div class="tab-pane active" role="tabpanel" id="step1">
-                <h3>Step 1</h3>
-                <p>This is step 1</p>
+                <div class="edit-form">
+                  <h2 class="edit-label">About the hero: </h2>
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-addon">Hero name</div>
+                        <input type="text" class="form-control" id="inputName" placeholder="name">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Headline</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="headline">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Twitter</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="twitter">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Facebook</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="facebook">
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <ul class="list-inline pull-right">
-                  <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>
+                  <li><button type="button" class="edit-form btn btn-pink next-step">Save and continue</button></li>
                 </ul>
               </div>
               <div class="tab-pane" role="tabpanel" id="step2">
-                <h3>Step 2</h3>
-                <p>This is step 2</p>
+                <div class="edit-form">
+                  <h2 class="edit-label">How's the hero inspire you: </h2>
+                  <form class="form-inline">
+                    <div class="form-group">
+                      <div class="input-group">
+                        <div class="input-group-addon">Hero name</div>
+                        <input type="text" class="form-control" id="inputName" placeholder="name">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Headline</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="headline">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Twitter</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="twitter">
+                      </div>
+                      <div class="input-group">
+                        <div class="input-group-addon">Facebook</div>
+                        <input type="text" class="form-control" id="inputHeadline" placeholder="facebook">
+                      </div>
+                    </div>
+                  </form>
+                </div>
                 <ul class="list-inline pull-right">
                   <li><button type="button" class="btn btn-default prev-step">Previous</button></li>
                   <li><button type="button" class="btn btn-primary next-step">Save and continue</button></li>

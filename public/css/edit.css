@@ -1,3 +1,44 @@
+.edit-form .form-control{
+  height:50px;
+}
+
+.edit-form label{
+  color: black;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+}
+
+.edit-form .input-group{
+  margin:20px;
+}
+
+.edit-form .input-group-addon{
+  color: black;
+	font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+  /*color:#E91E63;
+  background-color:#03A9F4;*/
+}
+
+ h2.edit-label {
+  color: black;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 100;
+  padding-top: 10px;
+}
+
+button.edit-form{
+  font-size: 20px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 400;
+  color:#fff;
+  background-color:#E91E63;
+  border-color:#E91E63;
+}
+
 .wizard {
     margin: 20px auto;
     background: #fff;
@@ -107,7 +148,7 @@ span.round-tab:hover {
 
 .wizard .tab-pane {
     position: relative;
-    padding-top: 50px;
+    padding-top: 5px;
 }
 
 .wizard h3 {

@@ -1,3 +1,22 @@
+.edit-form-complete p{
+  color: black;
+	font-size: 40px;
+	font-family: 'Raleway', sans-serif;
+	font-weight: 200;
+  margin-top:30px;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.edit-form textarea{
+  height:50px;
+}
+
+.edit-form-2 .form-control{
+  height:300px;
+  margin: 20px;
+}
+
 .edit-form .form-control{
   height:50px;
 }
@@ -10,7 +29,7 @@
 }
 
 .edit-form .input-group{
-  margin:20px;
+  margin-bottom:30px;
 }
 
 .edit-form .input-group-addon{
@@ -27,7 +46,7 @@
 	font-size: 40px;
 	font-family: 'Raleway', sans-serif;
 	font-weight: 100;
-  padding-top: 10px;
+  margin: 20px;
 }
 
 button.edit-form{
@@ -46,7 +65,7 @@ button.edit-form{
 
     .wizard .nav-tabs {
         position: relative;
-        margin: 40px auto;
+        margin: 10px auto;
         margin-bottom: 0;
         border-bottom-color: #e0e0e0;
     }
@@ -137,7 +156,7 @@ span.round-tab:hover {
 .wizard .nav-tabs > li a {
     width: 70px;
     height: 70px;
-    margin: 20px auto;
+    margin: 10px auto;
     border-radius: 100%;
     padding: 0;
 }

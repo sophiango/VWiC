@@ -9,10 +9,10 @@
 .banner
 {
 	/*background-color: #341F48;*/
-	background: -moz-linear-gradient(left, #341F48 50%, #2b193c 50%);
-	background: -webkit-linear-gradient(left, #341F48 50%, #2b193c 50%);
-	background: -o-linear-gradient(left, #341F48 50%, #2b193c 50%);
-	background: linear-gradient(left, #341F48 50%, #2b193c 50%);
+	background: -moz-linear-gradient(left, #FED136 50%, #FED136 50%);
+	background: -webkit-linear-gradient(left, #FED136 50%, #FED136 50%);
+	background: -o-linear-gradient(left, #FED136 50%, #FED136 50%);
+	background: linear-gradient(left, #FED136 50%, #FED136 50%);
 }
 
 .banner-text
@@ -86,8 +86,8 @@
 .hostyle
 {
 	font-family: 'Pacifico', cursive;
-	/*color: #c6027f;	*/
-	color: #33A29D;
+	/*color: #c6027f; #33A29D	*/
+	color: #B11818;
 	font-size: 60px;
 }
 .pstyle
@@ -141,7 +141,8 @@
 .menubar
 {
 	margin-bottom: 0px !important;
-	background-color: #3EC9C3;
+	/*background-color: #3EC9C3;*/
+	background-color: #162120;
 	border: none !important;
 	border-radius: 0px !important;
 	z-index: 2;
@@ -167,7 +168,7 @@
 }
 .navstyle li a:hover, .navstyle li a:focus, .navstyle li a.active
 {
-	background-color: #33a29d !important;
+	background-color: #294280 !important;
 	color: #fff;
 }
 
@@ -175,6 +176,9 @@
     float: right !important;
     margin-right: 0px !important;
 }
+
+
+
 
 
 /*------------------------------------------/
@@ -196,10 +200,10 @@
 .cofounders h2 {
 
     font-family: 'Pacifico', cursive;
-    color: #33A29D;
+    color: #294280;
     font-size: 40px;
     text-align: center;
-    margin: 20px;
+    margin: 50px;
 }
 
 .cofounders p {
@@ -207,6 +211,11 @@
 	font-family: 'Source Sans Pro',sans-serif;
     margin: 0 0 10px;
 }
+
+.cofounders .col-md-6.col-sm-6.col-xs-12 {
+    margin-top: 50px;
+}
+
 .progresscount
 {
 	margin-top: 60px;
@@ -244,6 +253,79 @@
 	font-family: 'Raleway', sans-serif;
 }
 
+
+/*------------------------------------------/
+/--------------MENTORSHIP-------------------/
+/------------------------------------------*/
+.mentorship
+{
+	background-color: #45AACB;
+	padding: 100px 0px;
+}
+.mentorship h1
+{
+	color: #fff;
+	font-family: "Source Sans Pro",sans-serif;
+	font-weight: 400;
+	font-size: 20px;
+	margin: 0px;
+}
+.mentorship .btn
+{
+	display: inline-block;
+	border: medium none;
+	background-color: #3EC9C3;
+	padding: 12px 38px;
+	color: #FFF;
+	border-radius: 4px;
+	font-size: 20px;
+}
+
+/*------------------------------------------/
+/-----------------EVENTS------------------/
+/------------------------------------------*/
+
+.events
+{
+	padding: 100px 0px 100px;
+	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
+}
+.feature-icons
+{
+	width: 12%;
+	float: left;
+}
+.featurebox
+{
+	margin-top: 60px;
+}
+.feature-icons img
+{
+	width: 100%;
+}
+.fh-desc
+{
+	width: 80%;
+	float: right;
+}
+
+.fh-desc h3
+{
+	margin: 0px !important;
+	font-family: 'Raleway', sans-serif;
+	font-size: 22px;
+	font-weight: 400;
+	text-transform: uppercase;
+	letter-spacing: 1px;
+	color: #242424;
+}
+.fh-desc p {
+    color: #888;
+    font-family: "Source Sans Pro",sans-serif;
+    font-size: 16px;
+    margin-top: 5px;
+	width: 90%;
+}
 /*------------------------------------------/
 /----------STORIES(HALL OF FAME)------------/
 /------------------------------------------*/
@@ -443,104 +525,7 @@ figure.effect-Beauty:hover p {
 	transform: translate3d(0,0,0) scale(1);
 }
 
-/* ==========================================================================
-   Blog Section
-   ========================================================================== */
 
-.blog-bg {
-	background: #2b2b2b;
-	padding-right: 0px;
-	padding-left: 0px;
-
-}
-
-.blog-bg h4 {
-	color: #dadada;
-	padding-top: 0px;
-}
-
-.blog-bg h5 {
-	color: #dadada;
-	font-size: 11px;
-}
-
-.blog-content {
-	padding-top: 10px;
-	background: #f2f2f2;
-}
-
-/*------------------------------------------/
-/--------------MENTORSHIP-------------------/
-/------------------------------------------*/
-.mentorship
-{
-	background-color: #45AACB;
-	padding: 100px 0px;
-}
-.mentorship h1
-{
-	color: #fff;
-	font-family: "Source Sans Pro",sans-serif;
-	font-weight: 400;
-	font-size: 20px;
-	margin: 0px;
-}
-.mentorship .btn
-{
-	display: inline-block;
-	border: medium none;
-	background-color: #3EC9C3;
-	padding: 12px 38px;
-	color: #fff;
-	border-radius: 4px;
-	font-size: 20px;
-}
-
-/*------------------------------------------/
-/-----------------EVENTS------------------/
-/------------------------------------------*/
-
-.events
-{
-	padding: 100px 0px 100px;
-	border-bottom: 2px solid rgba(0, 0, 0, 0.1);
-}
-.feature-icons
-{
-	width: 12%;
-	float: left;
-}
-.featurebox
-{
-	margin-top: 60px;
-}
-.feature-icons img
-{
-	width: 100%;
-}
-.fh-desc
-{
-	width: 80%;
-	float: right;
-}
-
-.fh-desc h3
-{
-	margin: 0px !important;
-	font-family: 'Raleway', sans-serif;
-	font-size: 22px;
-	font-weight: 400;
-	text-transform: uppercase;
-	letter-spacing: 1px;
-	color: #242424;
-}
-.fh-desc p {
-    color: #888;
-    font-family: "Source Sans Pro",sans-serif;
-    font-size: 16px;
-    margin-top: 5px;
-	width: 90%;
-}
 
 
 /*------------------------------------------/

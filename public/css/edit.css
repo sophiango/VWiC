@@ -1,3 +1,7 @@
+.edit-form .quote{
+  margin-bottom:20px;
+}
+
 .edit-form-complete p{
   color: black;
 	font-size: 40px;
@@ -6,10 +10,6 @@
   margin-top:30px;
   margin-bottom: 30px;
   text-align: center;
-}
-
-.edit-form textarea{
-  height:50px;
 }
 
 .edit-form-2 .form-control{

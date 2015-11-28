@@ -17,13 +17,14 @@
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
   <script type="text/javascript" src="/controllers/storyController.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+
   <script>
   $(window).load(function(){
     $("#menu").sticky({ topSpacing: 0 });
   });
   </script>
 </head>
-<body ng-controller="StoryCtrl">
+<body ng-app="vwic" ng-controller="StoryController as storyCtrl">
   <!-- NAVBAR -->
   <div class="navbar menubar" id="menu">
     <div class="container">
@@ -57,8 +58,8 @@
           <a href="#"><img class="icon-story" src="/images/twitter.png" alt="twitter icon"></a>
           <a href="#"><img class="icon-story" src="/images/facebook.png" alt="facebook icon"></a>
         </div>
-        <h1 class="hostyle">{{name}}</h1>
-        <h2 class="banner-text">{{title}}</h2>
+        <h1 class="hostyle">{{storyCtrl.story.subject}}</h1>
+        <h2 class="banner-text">{{storyCtrl.story.headline}}</h2>
       </center>
     </div>
   </div>

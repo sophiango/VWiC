@@ -13,7 +13,7 @@ var app = angular.module('vwic',[]);
 //       });
 // }
 
-app.controller('MainCtrl', ['$scope',function($scope){
+app.controller('MainController', ['$scope',function($scope){
   $scope.number1 = 55;
   $scope.number2 = 88;
 }]);

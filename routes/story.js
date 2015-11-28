@@ -38,7 +38,8 @@ router.post('/new',function(req,res){
     subject_img : req.body.subject_img,
     author: 'sophia',
     twitterAcc : req.body.twitterAcc,
-    facebookAcc : req.body.facebookAcc
+    facebookAcc : req.body.facebookAcc,
+    content : req.body.content
   });
   story.save(function (err){
     if (err){

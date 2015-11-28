@@ -1,0 +1,40 @@
+<div class="tab-pane active" role="tabpanel" id="step1">
+  <div class="edit-form">
+    <h2 class="edit-label">About the hero: </h2>
+    <!-- <form name="step1-form" role="form" data-toggle="validator"> -->
+      <div class="form-group">
+        <div class="input-group">
+          <div class="input-group-addon">Hero name</div>
+          <input type="text" class="form-control" name="inputSubject" placeholder="" required ng-model="formData.subject">
+        </div>
+        <div class="input-group">
+          <div class="input-group-addon">Hero image</div>
+          <input type="url" class="form-control" placeholder="" ng-model="formData.subject_img">
+        </div>
+        <div class="input-group">
+          <div class="input-group-addon">Headline</div>
+          <input type="text" class="form-control" name="inputHeadline" placeholder="" required ng-model="formData.headline">
+        </div>
+        <div class="row">
+          <div class="col-sm-6">
+            <div class="input-group">
+              <div class="input-group-addon">Twitter @</div>
+              <!-- <input type="text" class="form-control" name="twitterAcc"> -->
+              <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="twitterAcc" placeholder="" ng-model="formData.twitterAcc">
+            </div>
+          </div>
+          <div class="col-sm-6">
+            <div class="input-group">
+              <div class="input-group-addon">Facebook</div>
+              <!-- <input type="text" class="form-control" name="facebookAcc"> -->
+              <input type="text" pattern="^[_A-z0-9]{1,}$" maxlength="15" class="form-control" name="facebookAcc" placeholder="" ng-model="formData.facebookAcc">
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- </form> -->
+  </div>
+  <ul class="list-inline pull-right">
+    <li><button ui-sref="story.step2" class="edit-form btn next-step">Save and continue</button></li>
+  </ul>
+</div>

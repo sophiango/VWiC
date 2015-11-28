@@ -1,47 +1,47 @@
-var app = angular.module('vwic',['ngAnimate', 'ui.router']);
+var app = angular.module('vwic',[]);
 
 // configuring our routes
 // =============================================================================
-app.config(function($stateProvider, $urlRouterProvider) {
-
-    $stateProvider
-
-        // route to show our basic form (/form)
-        .state('story', {
-            url: '/story',
-            templateUrl: 'edit.html',
-            controller: 'StoryController'
-        })
-
-        // nested states
-        // each of these sections will have their own view
-        // url will be nested (/form/profile)
-        .state('story.step1', {
-            url: '/step1',
-            templateUrl: 'form-profile.html'
-        })
-
-        // url will be /form/interests
-        .state('story.step2', {
-            url: '/step2',
-            templateUrl: 'form-interests.html'
-        })
-
-        // url will be /form/payment
-        .state('story.step3', {
-            url: '/step3',
-            templateUrl: 'step4.html'
-        })
-
-        .state('story.step4', {
-            url: '/step4',
-            templateUrl: 'form-interests.html'
-        })
-
-    // catch all route
-    // send users to the form page
-    $urlRouterProvider.otherwise('/story/profile');
-})
+// app.config(['$stateProvider',function($stateProvider, $urlRouterProvider) {
+//
+//     $stateProvider
+//
+//         // route to show our basic form (/form)
+//         .state('story', {
+//             url: '../views/form.html',
+//             templateUrl: 'form.html',
+//             controller: 'StoryController'
+//         })
+//
+//         // nested states
+//         // each of these sections will have their own view
+//         // url will be nested (/form/profile)
+//         .state('story.step1', {
+//             url: '../views/step1.html',
+//             templateUrl: 'step1.html'
+//         })
+//
+//         // url will be /form/interests
+//         .state('story.step2', {
+//             url: '/step2',
+//             templateUrl: 'step2.html'
+//         })
+//
+//         // url will be /form/payment
+//         .state('story.step3', {
+//             url: '/step3',
+//             templateUrl: 'step3.html'
+//         })
+//
+//         .state('story.step4', {
+//             url: '/step4',
+//             templateUrl: 'step4.html'
+//         })
+//
+//     // catch all route
+//     // send users to the form page
+//     $urlRouterProvider.otherwise('/story/step1');
+// }]);
 
 app.controller('StoryController',['$scope', '$http', function($scope, $http){
   $scope.formData = {};

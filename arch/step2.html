@@ -1,0 +1,13 @@
+<div class="tab-pane" role="tabpanel" id="step2">
+  <div class="edit-form-2">
+    <h2 class="edit-label">How the hero inspired you: </h2>
+    <!-- <form id="step2-form"> -->
+      <textarea ng-model="formData.content" name=content class="form-control" rows="12" placeholder="Place content here" required></textarea>
+    <!-- </form> -->
+  </div>
+  <ul class="list-inline pull-right">
+    <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
+    <li><button ui-sref="story.step1" type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+    <li><button ui-sref="story.step3" type="button" class="edit-form btn next-step">Save and continue</button></li>
+  </ul>
+</div>

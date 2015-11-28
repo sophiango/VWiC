@@ -1,0 +1,41 @@
+<div class="tab-pane" role="tabpanel" id="step3">
+    <!-- <form id="step3-form" class="edit-form"> -->
+      <div class="form-group">
+        <h2 class="edit-label">More resources (articles and images,): </h2>
+        <p>Articles: (Please paste paragraphs you want to quote and the resource of the article)</p>
+        <textarea ng-model="formData.quotes.quote" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+        <div class="input-group">
+          <div class="input-group-addon">Source 1</div>
+          <input ng-model="formData.quotes.source" type="url" class="form-control quote" placeholder="src1">
+        </div>
+        <textarea ng-model="formData.quotes.quote" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+        <div class="input-group">
+          <div class="input-group-addon">Source 2</div>
+          <input ng-model="formData.quotes.source" type="url" class="form-control" placeholder="src2">
+        </div>
+        <textarea ng-model="formData.quotes.quote" name=quote1 class="form-control quote" rows="12" placeholder="Place content here"></textarea>
+        <div class="input-group">
+          <div class="input-group-addon">Source 3</div>
+          <input ng-model="formData.quotes.source" type="url" class="form-control" placeholder="src3">
+        </div>
+        <p>Images: (Please paste the link of the image you want to attach to your post)</p>
+        <div class="input-group">
+          <div class="input-group-addon">Image 1</div>
+          <input ng-model="formData.images.url" type="url" class="form-control" placeholder="img1">
+        </div>
+        <div class="input-group">
+          <div class="input-group-addon">Image 2</div>
+          <input ng-model="formData.images.url" type="url" class="form-control" placeholder="img2">
+        </div>
+        <div class="input-group">
+          <div class="input-group-addon">Image 3</div>
+          <input ng-model="formData.images.url" type="url" class="form-control" placeholder="img3">
+        </div>
+      </div>
+    <!-- </form> -->
+  <ul class="list-inline pull-right">
+    <li><button ui-sref="story.step2" type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+    <li><button ui-sref="story.step4" type="button" class="edit-form btn btn-default next-step">Skip</button></li>
+    <li><button ui-sref="story.step4" type="button" class="edit-form btn next-step">Save and continue</button></li>
+  </ul>
+</div>

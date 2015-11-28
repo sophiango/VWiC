@@ -21,10 +21,6 @@
   <script type="text/javascript" src="/js/edit.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
   <script src="/controllers/storyController.js"></script>
-
-  <script src="//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.10/angular-ui-router.min.js"></script>
-  <script src="//ajax.googleapis.com/ajax/libs/angularjs/1.2.16/angular-animate.min.js"></script>
-
   <!-- Latest compiled and minified JavaScript -->
 </head>
 <body ng-app="vwic" ng-controller="StoryController">
@@ -37,28 +33,28 @@
             <div class="connecting-line"></div>
               <ul class="nav nav-tabs" role="tablist">
                 <li role="presentation" class="active">
-                  <a ui-sref-active="active" ui-sref="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
+                  <a href="#step1" data-toggle="tab" aria-controls="step1" role="tab" title="Step 1">
                     <span class="round-tab">
                       <i class="glyphicon glyphicon-folder-open"></i>
                     </span>
                   </a>
                 </li>
                 <li role="presentation" class="disabled">
-                  <a ui-sref-active="active" ui-sref="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
+                  <a href="#step2" data-toggle="tab" aria-controls="step2" role="tab" title="Step 2">
                     <span class="round-tab">
                       <i class="glyphicon glyphicon-pencil"></i>
                     </span>
                   </a>
                 </li>
                 <li role="presentation" class="disabled">
-                  <a ui-sref-active="active" ui-sref="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
+                  <a href="#step3" data-toggle="tab" aria-controls="step3" role="tab" title="Step 3">
                     <span class="round-tab">
                       <i class="glyphicon glyphicon-picture"></i>
                     </span>
                   </a>
                 </li>
                 <li role="presentation" class="disabled">
-                  <a ui-sref-active="active" ui-sref="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
+                  <a href="#complete" data-toggle="tab" aria-controls="complete" role="tab" title="Complete">
                     <span class="round-tab">
                       <i class="glyphicon glyphicon-ok"></i>
                     </span>
@@ -68,7 +64,7 @@
           </div>
 
         <form id="create_new_form" ng-submit="createStory()" role="form" data-toggle="validator">
-          <div class="tab-content" ui-view>
+          <div class="tab-content">
             <div class="tab-pane active" role="tabpanel" id="step1">
               <div class="edit-form">
                 <h2 class="edit-label">About the hero: </h2>
@@ -106,7 +102,7 @@
                 <!-- </form> -->
               </div>
               <ul class="list-inline pull-right">
-                <li><button ui-sref="story.step2" class="edit-form btn next-step">Save and continue</button></li>
+                <li><button class="edit-form btn next-step">Save and continue</button></li>
               </ul>
             </div>
 
@@ -119,8 +115,8 @@
               </div>
               <ul class="list-inline pull-right">
                 <!-- <li><button type="button" class="btn btn-default prev-step">Previous</button></li> -->
-                <li><button ui-sref="story.step1" type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
-                <li><button ui-sref="story.step3" type="button" class="edit-form btn next-step">Save and continue</button></li>
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
               </ul>
             </div>
 
@@ -160,9 +156,9 @@
                   </div>
                 <!-- </form> -->
               <ul class="list-inline pull-right">
-                <li><button ui-sref="story.step2" type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
-                <li><button ui-sref="story.step4" type="button" class="edit-form btn btn-default next-step">Skip</button></li>
-                <li><button ui-sref="story.step4" type="button" class="edit-form btn next-step">Save and continue</button></li>
+                <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li>
+                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
               </ul>
             </div>
             <div class="tab-pane" role="tabpanel" id="complete">
@@ -171,7 +167,7 @@
                 <p>Share it with your network using this link: http://vwic.com/story/1ab224</p>
               </div>
               <ul class="list-inline pull-right">
-                <li><button ui-sref="story.step3" class="edit-form btn btn-default prev-step">Previous</button></li>
+                <li><button class="edit-form btn btn-default prev-step">Previous</button></li>
                 <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
               </ul>
             </div>

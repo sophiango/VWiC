@@ -1,7 +1,7 @@
 var mongoose = require('mongoose');
 
 var quoteSchema = new mongoose.Schema({
-  quoteId : {type: String, required : true},
+  // quoteId : {type: String, required : true},
   quote: {type: String, required : true},
   source: {type: String, required : true},
 });
@@ -10,8 +10,14 @@ var commentSchema = new mongoose.Schema({
   userId : {type: String, required : true},
   username : {type: String, required : true},
   content : {type: String, required : true},
-  createdAt : Date.now()
-});
+  createdAt : Date
+}, {_id:false});
+
+var imageSchema = new mongoose.Schema({
+    url : {type:String, required: true},
+    caption : String,
+    createdAt : Date
+}, {_id:false});
 
 var StorySchema = new mongoose.Schema({
   storyId : {type: String, unique: true, required : true},
@@ -21,10 +27,11 @@ var StorySchema = new mongoose.Schema({
   author: {type: String, required : true},
   twitterAcc : String,
   facebookAcc : String,
-  createdAt: Date
+  createdAt: Date,
   modifiedAt: Date,
   content: String,
   quotes : [quoteSchema],
+  images : [imageSchema],
   comments : [commentSchema]
 });
 

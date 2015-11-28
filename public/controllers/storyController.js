@@ -1,36 +1,122 @@
-var app = angular.module('vwic',[]);
-// var Story = require('../models/story');
-// var chance = require('chance').Chance();
+var app = angular.module('vwic',['ngAnimate', 'ui.router']);
 
-app.controller('StoryController', ['$scope',function($scope){
+// configuring our routes
+// =============================================================================
+app.config(function($stateProvider, $urlRouterProvider) {
 
-  this.story = {};
+    $stateProvider
 
-  $scope.addStepOneInput = function(){
-    console.log('input: ' + $scope.subject);
+        // route to show our basic form (/form)
+        .state('story', {
+            url: '/story',
+            templateUrl: 'edit.html',
+            controller: 'StoryController'
+        })
 
-      // story.storyId = chance.natural({min:1, max:10000}).toString();
-      // story.headline = $scope.headline;
-      // story.subject= $scope.subject;
-      // story.subject_img = $scope.subject_img
-      // story.author= 'sophia'
-      // story.twitterAcc = $scope.twitterAcc,
-      // story.facebookAcc = $scope.facebookAcc,
-      // console.log('log= '+story.subject);
-  }
+        // nested states
+        // each of these sections will have their own view
+        // url will be nested (/form/profile)
+        .state('story.step1', {
+            url: '/step1',
+            templateUrl: 'form-profile.html'
+        })
+
+        // url will be /form/interests
+        .state('story.step2', {
+            url: '/step2',
+            templateUrl: 'form-interests.html'
+        })
+
+        // url will be /form/payment
+        .state('story.step3', {
+            url: '/step3',
+            templateUrl: 'step4.html'
+        })
+
+        .state('story.step4', {
+            url: '/step4',
+            templateUrl: 'form-interests.html'
+        })
+
+    // catch all route
+    // send users to the form page
+    $urlRouterProvider.otherwise('/story/profile');
+})
+
+app.controller('StoryController',['$scope', '$http', function($scope, $http){
+  $scope.formData = {};
+
+  $http.get('/story')
+    .success(function(data){
+      $scope.story = data;
+    })
+    .error(function(error){
+      console.log('Error:' + error);
+    });
+
+  // $http.get('/story/:story_id')
+  //   .success(function(data){
+  //     $scope.story = data;
+  //     console.log(data);
+  //   })
+  //   .error(function(data){
+  //     console.log('Error:' + data);
+  //   });
+
+    $scope.createStory = function() {
+        $http.post('/story/new', $scope.formData)
+            .success(function(data) {
+                $scope.formData = {};
+                $scope.story = data;
+                console.log(data);
+            })
+            .error(function(data) {
+                console.log('Error: ' + data);
+            });
+    };
 
 }]);
 
-// function StoryCtrl($scope, $http) {
-//   $scope.formData = {};
+
+
+// (function(){
+//   var app = angular.module('vwic',[]);
+//   // var Story = require('../models/story');
+//   // var chance = require('chance').Chance();
 //
-//   $http.get('/')
-//     .success(function() {
-//       $scope.name='Kathy Pham';
-//       $scope.title='The woman in the White House';
-//       console.log('OK');
-//       })
-//     .error(function() {
-//       console.log('Error');
-//       });
-// }
+//   app.factory('story',[function(){
+//     var story = {};
+//     return story;
+//   }])
+//
+//   app.controller('StoryController',['$scope','$log','story',
+//     function($scope,$log,story){
+//       $scope.subject =  story.subject;
+//       $scope.headline =  story.headline;
+//     $scope.addStepOneInput = function(){
+//       console.log('input: ' + $scope.subject);
+//
+//         // story.storyId = chance.natural({min:1, max:10000}).toString();
+//         // story.headline = $scope.headline;
+//         // story.subject= $scope.subject;
+//         // story.subject_img = $scope.subject_img
+//         // story.author= 'sophia'
+//         // story.twitterAcc = $scope.twitterAcc,
+//         // story.facebookAcc = $scope.facebookAcc,
+//         // console.log('log= '+story.subject);
+//     }
+//   }]);
+//
+//   app.controller('StoryController',['$http',function getStory($scope, $http){
+//       $scope.formData = {};
+//       $http.get('/1234')
+//         .success(function() {
+//           $scope.subject='Kathy Pham';
+//           $scope.headline='The woman in the White House';
+//           console.log('OK');
+//           })
+//         .error(function() {
+//           console.log('Error');
+//           });
+//   }]);
+// })();

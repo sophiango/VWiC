@@ -24,7 +24,7 @@
   });
   </script>
 </head>
-<body ng-app="vwic" ng-controller="StoryController as storyCtrl">
+<body ng-app="vwic" ng-controller="StoryController">
   <!-- NAVBAR -->
   <div class="navbar menubar" id="menu">
     <div class="container">
@@ -58,8 +58,8 @@
           <a href="#"><img class="icon-story" src="/images/twitter.png" alt="twitter icon"></a>
           <a href="#"><img class="icon-story" src="/images/facebook.png" alt="facebook icon"></a>
         </div>
-        <h1 class="hostyle">{{storyCtrl.story.subject}}</h1>
-        <h2 class="banner-text">{{storyCtrl.story.headline}}</h2>
+        <h1 class="hostyle">{{story.subject}}</h1>
+        <h2 class="banner-text">{{story.headline}}</h2>
       </center>
     </div>
   </div>

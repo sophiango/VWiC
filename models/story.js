@@ -36,6 +36,7 @@ var StorySchema = new mongoose.Schema({
 });
 
 StorySchema.pre('save', function(next){
+  storyId : chance.natural({min:1, max:10000}).toString();
   now = new Date();
   this.modifiedAt = now;
   if ( !this.createdAt ) {

@@ -1,81 +1,147 @@
-var app = angular.module('vwic',[]);
+'use strict';
 
-// configuring our routes
-// =============================================================================
-// app.config(['$stateProvider',function($stateProvider, $urlRouterProvider) {
+var app = angular.module('vwic',['ngRoute']);
+// app.config(['$stateProvider','$urlRouterProvider',function($stateProvider, $urlRouterProvider) {
 //
-//     $stateProvider
+//   $stateProvider
+//     .state('stories', {
+//       url: '/stories',
+//       templateUrl: '/stories.html',
+//       controller: 'StoryController'
+//     });
 //
-//         // route to show our basic form (/form)
-//         .state('story', {
-//             url: '../views/form.html',
-//             templateUrl: 'form.html',
-//             controller: 'StoryController'
-//         })
+//     .state('stories', {
+//       url: '/stories/{story_id}',
+//       templateUrl: '/story.html',
+//       controller: 'StoryController'
+//     });
 //
-//         // nested states
-//         // each of these sections will have their own view
-//         // url will be nested (/form/profile)
-//         .state('story.step1', {
-//             url: '../views/step1.html',
-//             templateUrl: 'step1.html'
-//         })
-//
-//         // url will be /form/interests
-//         .state('story.step2', {
-//             url: '/step2',
-//             templateUrl: 'step2.html'
-//         })
-//
-//         // url will be /form/payment
-//         .state('story.step3', {
-//             url: '/step3',
-//             templateUrl: 'step3.html'
-//         })
-//
-//         .state('story.step4', {
-//             url: '/step4',
-//             templateUrl: 'step4.html'
-//         })
-//
-//     // catch all route
-//     // send users to the form page
-//     $urlRouterProvider.otherwise('/story/step1');
+//   $urlRouterProvider.otherwise('index');
 // }]);
 
-app.controller('StoryController',['$scope', '$http', function($scope, $http){
-  $scope.formData = {};
 
-  $http.get('/story')
+// app.controller('StoryController', ['$scope','$stateParams','stories',function($scope, $stateParams, stories){
+//   $scope.story = stories.stories[$stateParams.story_id];
+// }]);
+
+app.config(['$routeProvider',
+function($routeProvider) {
+  $routeProvider
+  .when('/AddNewStory', {
+    templateUrl: '/views/edit.html',
+    controller: 'AddNewStoryCtrl'
+  })
+  .when('/ShowStories', {
+    templateUrl: '/views/stories.html',
+    controller: 'ShowStoriesCtrl'
+  })
+  .when('/ShowStory/:storyId', {
+    templateUrl: '/views/story.html',
+    controller: 'ShowStoryCtrl'
+  })
+  .otherwise({
+    redirectTo: '/ShowStories'
+  });
+
+}]);
+
+// app.factory('stories',[function(){
+//   var factory = {
+//       stories:[]
+//   };
+//   return factory;
+// }]);
+
+app.controller('ShowStoriesCtrl',['$scope', '$http', function($scope, $http){
+  $http.get('/stories')
+  .success(function(response){
+    console.log('all stories: ' + data);
+    $scope.stories = response.data;
+  })
+  .error(function(response){
+    console.log('Error:' + response.codeStatus);
+  });
+}]);
+
+app.controller('AddNewStoryCtrl',['$scope', '$http', function($scope, $http){
+  $scope.createStory = function(req,res) {
+    $http.post('/story', $scope.formData)
+    .success(function(data) {
+      $scope.formData = {};
+      $scope.story = data;
+    })
+    .error(function(data) {
+      console.log('Error: ' + data);
+    });
+  };
+}]);
+
+
+app.controller('ShowStoryCtrl',['$scope', '$http', function($scope, $http){
+  // $scope.storyId = $routeParams.storyId;
+  var storyId = $routeParams.storyId;
+  $scope.getStoryById = function(storyId){
+    $http.get('/story/' + storyId)
     .success(function(data){
       $scope.story = data;
+      console.log('Data: ' + data);
     })
     .error(function(error){
       console.log('Error:' + error);
     });
-
-  // $http.get('/story/:story_id')
-  //   .success(function(data){
-  //     $scope.story = data;
-  //     console.log(data);
-  //   })
-  //   .error(function(data){
-  //     console.log('Error:' + data);
-  //   });
-
-    $scope.createStory = function() {
-        $http.post('/story/new', $scope.formData)
-            .success(function(data) {
-                $scope.formData = {};
-                $scope.story = data;
-                console.log(data);
-            })
-            .error(function(data) {
-                console.log('Error: ' + data);
-            });
-    };
-
+  };
 }]);
+
+// app.controller('StoryController',['$scope', '$http', function($scope, $http){
+//   $scope.formData = {};
+//
+//   $http.get('/story')
+//     .success(function(data){
+//       $scope.story = data;
+//     })
+//     .error(function(error){
+//       console.log('Error:' + error);
+//     });
+//
+//     $scope.getStoryById = function(story_id){
+//       $http.get('/story/' + story_id)
+//         .success(function(data){
+//           $scope.story = data;
+//           console.log('Data: ' + data);
+//         })
+//         .error(function(error){
+//           console.log('Error:' + error);
+//         });
+//     };
+//
+//     $http.get('/story/' + story_id)
+//       .success(function(data){
+//         $scope.story = data;
+//       })
+//       .error(function(error){
+//         console.log('Error:' + error);
+//       });
+//
+//     $http.get('/story/new')
+//       .success(function(){
+//       })
+//       .error(function(error){
+//         console.log('Error:' + error);
+//       });
+//
+//
+//     $scope.createStory = function(req,res) {
+//         $http.post('/story/new', $scope.formData)
+//             .success(function(data) {
+//                 $scope.formData = {};
+//                 $scope.story = data;
+//             })
+//             .error(function(data) {
+//                 console.log('Error: ' + data);
+//             });
+//     };
+//
+// }]);
 
 
 

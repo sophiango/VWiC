@@ -20,10 +20,11 @@
   <script type="text/javascript" src="/js/jquery.sticky.js"></script>
   <script type="text/javascript" src="/js/edit.js"></script>
   <script type="text/javascript" src="/js/bootstrap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.0-beta.2/angular-route.min.js"></script>
   <script src="/controllers/storyController.js"></script>
   <!-- Latest compiled and minified JavaScript -->
 </head>
-<body ng-app="vwic" ng-controller="StoryController">
+<body ng-app="vwic" ng-controller="AddNewStoryCtrl">
   <div class="container">
     <h3 class="hostyle">Creating a new hero story</h3>
     <div class="row">
@@ -157,18 +158,18 @@
                 <!-- </form> -->
               <ul class="list-inline pull-right">
                 <li><button type="button" class="edit-form btn btn-default prev-step">Previous</button></li>
-                <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li>
-                <li><button type="button" class="edit-form btn next-step">Save and continue</button></li>
+                <!-- <li><button type="button" class="edit-form btn btn-default next-step">Skip</button></li> -->
+                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
               </ul>
             </div>
             <div class="tab-pane" role="tabpanel" id="complete">
               <div class="edit-form-complete">
                 <p>Thank you for sharing your hero story!</p>
-                <p>Share it with your network using this link: http://vwic.com/story/1ab224</p>
+                <p>Share it with your network using this link: http://vwic.com/story/{{story.story_id}}</p>
               </div>
               <ul class="list-inline pull-right">
-                <li><button class="edit-form btn btn-default prev-step">Previous</button></li>
-                <li><button type="submit" class="edit-form btn next-step">Publish</button></li>
+                <!-- <li><button class="edit-form btn btn-default prev-step">Previous</button></li> -->
+                <li><a href="#/story/"><button class="edit-form btn next-step">View story</button></a></li>
               </ul>
             </div>
             <div class="clearfix"></div>
